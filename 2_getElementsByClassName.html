@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+</body>
+<script>
+    let box = document.getElementsByClassName("box");
+    console.log(box); //shows array in console
+
+    for (let j of box) {
+        console.log(j);
+    } //used to print both the divs seperately in console
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button oneclick = "getLocation()">Get Location</button>
+    <p id="location"></p>
+</body>
+<script>
+    function getLocation(){
+        console.log("hello");
+        let geo = navigator.geolocation;
+        let location = document.getElementById("location");
+
+        if(geo){
+            geo.getCurrentPosition(
+                (position) =>{
+                 let lan = position.coords.latitude;
+                 let long = position.coords.longitude
+                 locationId.outerHTML = `<a targat = "_blank">hraf =https://google.com/maps?q=${lat},${long}>Google Location</a> `
+                },
+                (error)=>{
+                    locationId.innerHTML = "Fail to collect location"
+                }
+            )
+        }else{
+            locationId.innerHTML = "you have blocked the location. Allow the location"
+        }
+    }
+</script>
+</html>

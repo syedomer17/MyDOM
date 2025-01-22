@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+
+    <p class="box">Hello 1</p>
+    <p class="box">Hello 2</p>
+    <p class="box">Hello 3</p>
+</body>
+<script>
+    // querySelector sirf prints 1st one that matches
+    // here we added p because i only wanted p tags with class box and not the divs
+    let pbox = document.querySelector("p.box");
+    console.log(pbox);
+    // querySelectorAll prints all instances that matches
+    let pboxAll = document.querySelectorAll("p.box");
+    // prints a collection
+    console.log(pboxAll);
+
+    for (let i of pboxAll) {
+        // prints all of them one by one
+        console.log(i);
+    }
+</script>
+
+</html>

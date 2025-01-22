@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">Hello I am h1 tag</h1>
+    <h2 id="h2">Hello I am h2 tag</h2>
+</body>
+<script>
+    // innerHTML => to get and set
+    // outerHTML => to get and set
+
+    let h1 = document.getElementById("h1");
+    console.log(h1);
+    // to get (prints the content inside the id)
+    console.log(h1.innerHTML);
+    // to set (now the h1 tag has content Saad in it)
+    h1.innerHTML = "Saad";
+    // prints the whole tag with content Saad in console
+    console.log(h1);
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="suhail">Hello i am suhail</div>
+    <div id="box"></div>
+</body>
+<script>
+    //setAttribute
+
+    let suhailId = document.getElementById("suhail");
+    console.log(suhailId);
+
+    suhailId.setAttribute("class", "cfi");
+
+    // fetching the box
+    let box = document.getElementById("box");
+    // giving it a class
+    // box.classList.add("box1"); alt way of giving class
+    box.setAttribute("class", "box1");
+    // giving it bg red
+    // box.setAttribute("style", "background-color: red") {you can do this when using setAttribute}
+    box.style.backgroundColor = "red";
+    box.style.width = "100px";
+    box.style.height = "100px";
+    // removing attribute
+    box.removeAttribute("class");
+    console.log(box);
+</script>
+
+</html>

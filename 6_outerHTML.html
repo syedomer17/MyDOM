@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="h2">Hello I am h2 tag</h2>
+</body>
+<script>
+    // outerHTML => to get and set
+    let h2 = document.getElementById("h2");
+    // prints the entire tag in string
+    console.log(h2.outerHTML);
+    h2.outerHTML = "<p>This is now a paragraph</p>";
+    // in body it will change (not in console, but if i go in inspect it will show me whole tag as p only not h2)
+    console.log(h2);
+</script>
+
+</html>

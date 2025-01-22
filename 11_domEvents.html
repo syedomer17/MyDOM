@@ -1,0 +1,75 @@
+<!-- DOM events are actions that occur as a result of user's action or a result of state change of the element of a dom tree -->
+
+<!-- Example:
+1. When mouse button is clicked
+2. When a webpage is loaded.
+3. WHen an image is loaded.
+4. When an input field changes.
+5. When a html form is submitted.
+6. When a user strokes a key
+7. when you hover your cursor over an element 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="display()">Hello</button>
+    <button id="btn">Click Me</button>
+    <button id="mouseover">Mouseover</button>
+    <button id="mouseout">mouseout</button>
+    <button id="date">Get Current date</button>
+    <button id="remove">Remove event</button>
+</body>
+<script>
+    //   There are 2 types to register an event.
+    // 1. Using onclick with function
+
+    function display() {
+        alert("You got clicked!");
+    }
+    // 2. Using addEventListener
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", () => {
+        alert("You clicked me");
+    });
+
+    // mouseover event
+    let mouseover = document.getElementById("mouseover");
+    mouseover.addEventListener("mouseover", () => {
+        alert("This is a mouseover event");
+    });
+
+    //mouseout event
+
+    let mouseout = document.getElementById("mouseout");
+
+    mouseout.addEventListener("mouseout", () => {
+        alert("mouseout bruv");
+    });
+
+    // w3Schools example
+
+    let date = document.getElementById("date");
+
+    date.addEventListener("click", () => {
+        date.innerHTML = Date();
+    });
+
+    // remove
+
+    let remove = document.getElementById("remove");
+    function event() {
+        alert(`Bye`);
+    }
+    remove.addEventListener("click", event);
+    remove.removeEventListener("click", event);
+</script>
+
+</html>
