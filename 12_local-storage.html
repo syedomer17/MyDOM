@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local-storage</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    let user = {
+        name:"syed omer ali",
+        age:18,
+        isAlive:true
+    }
+    // i should store the data in localstore with the key value
+    // key == value 
+    // value == contain
+
+    // note : value should be always in string
+
+    localStorage.setItem('data',JSON.stringify(user));
+    localStorage.setItem("cfi","omer");
+
+    let getUserData = localStorage.getItem("data");
+    console.log(getUserData);
+
+    localStorage.removeItem("cfi")
+
+</script>
+</html>

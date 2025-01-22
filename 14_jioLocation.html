@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location"></p>
+</body>
+
+<script>
+    function getLocation() {
+        console.log("hello");
+        let geo = navigator.geolocation
+        let locationId = document.getElementById("location")
+
+        if (geo) {
+            geo.getCurrentPosition(
+                (postion) => {
+                    let lat = postion.coords.latitude;
+                    let long = postion.coords.longitude
+                    locationId.outerHTML = `<a target ="_blank" href=https://google.com/maps?q=${lat},${long}>Google Location</a> `
+                },
+                (error) => {
+                    locationId.innerHTML = "Failed to fetch location. Please allow location access"
+                }
+            )
+        } else {
+            locationId.innerHTML = "You BLocked the permission or geolocation is not supported"
+        }
+
+    }
+</script>
+
+</html>
