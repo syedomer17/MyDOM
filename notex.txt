@@ -1,0 +1,4 @@
+Aspect:without:preventDefault(),with:priventDefault();
+without:page-reload:yes,the page reloads, with:no,the page will not be reload
+without:use-case:for simple form submissions to a surver,with:for dynamic handling
+without:control;browser handles submissions,with:you have full control over the submission process.

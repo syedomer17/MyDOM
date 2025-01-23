@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"
+        integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .cards {
+            border-color: red;
+        }
+    </style>
+    <title>Card</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Posts from JSONPlaceholder</h1>
+        <button id="fetchPosts" class="btn btn-primary">Fetch Posts</button>
+        <div id="postContainer" class="row g-3">
+        </div>
+    </div>
+</body>
+
+<script>
+    const fetchPostButtons = document.getElementById("fetchPosts");
+    const postContainer = document.getElementById("postContainer");
+
+    const fetchPosts = async () => {
+        try {
+            const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+
+            postContainer.innerHTML = "";
+
+            response.data.forEach(post => {
+                const card = document.createElement('div');
+                card.className = 'col-md-4';
+                card.innerHTML = `
+         <div class = "card cards h-100">
+            <div class = "card-body">
+               <h5 class = "card-title">${post.title}</h5>
+            </div>
+         </div>`;
+
+                postContainer.appendChild(card);
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    fetchPostButtons.addEventListener('click', fetchPosts)
+</script>
+</html>

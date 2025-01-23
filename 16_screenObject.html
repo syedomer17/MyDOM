@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a target="_blank" id="atag" href="https://google.com">Google</a>
+
+    <form id="formID">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+        <br>
+        <br>
+        <label for="phone">Phone:</label>
+        <input type="number" name="phone" id="phone">
+        <br>
+        <br>
+        <button id="submitId" type="submit">submit</button>
+    </form>
+
+</body>
+<script>
+    // let atag = document.getElementById("atag");
+    // atag.addEventListener("click",()=>{
+    //     console.log("Clicked");
+    //    //  event.preventDefault();// we are stoping the dom 
+    // })
+
+    let formID = document.getElementById("formID");
+
+    formID.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+
+        console.log(name, email, phone);
+        console.log(screen.width);
+        console.log(screen.height);
+        console.log(screen.colorDepth);
+        console.log(screen.orientation.type);
+    })
+
+    
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" height="500px" width="600px" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg" alt="heavy-pic">
+
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded",()=>{
+        console.log('page loaded')
+
+        let image = document.getElementById("img");
+
+        image.addEventListener('load',()=>{
+            console.log("fully loaded");
+        })
+    })
+</script>
+</html>

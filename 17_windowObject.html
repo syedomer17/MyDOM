@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn-1">Button1</button>
+    <button id="btn-2">Button2</button>
+    <button id="btn-3">Button3</button>
+</body>
+
+<script>
+    let btn1 = document.getElementById("btn-1");
+    let btn2 = document.getElementById("btn-2");
+    let btn3 = document.getElementById("btn-3");
+
+    let features = ("heigth=500,width=800");
+    let box;
+
+    btn1.addEventListener("click",()=>{
+      box =  window.open("https://google.com","Google",features)
+    });
+
+    btn2.addEventListener("click",()=>{
+        box.close()
+    })
+
+    btn3.addEventListener("click",()=>{
+        window.open("https://suhail.app","click",features)
+    })
+
+</script>
+</html>
